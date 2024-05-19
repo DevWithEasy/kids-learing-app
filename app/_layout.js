@@ -2,7 +2,7 @@ import { View, Text } from 'react-native'
 import { SplashScreen, Stack } from 'expo-router'
 import { useFonts } from 'expo-font';
 import { useEffect } from 'react';
-// SplashScreen.preventAutoHideAsync()
+SplashScreen.preventAutoHideAsync()
 
 export default function RootLayout() {
   const [fontsLoaded, error] = useFonts({

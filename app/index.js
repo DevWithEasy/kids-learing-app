@@ -1,77 +1,66 @@
-import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, ImageBackground, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import Source from "../assets/Source";
 import { home } from "../assets/ui_data";
 
+
 export default function Page() {
   const inset = useSafeAreaInsets()
   const array = new Array(10).fill(0).map((_, i) => i + 1)
-  console.log(Source.colors())
+  // console.log(Source.colors())
   return (
     <View
       style={{
         paddingTop: inset.top
       }}
 
-      className='bg-white'
+      className='bg-white pb-10'
     >
-      {/* <Text
-        className='text-2xl'
+      <Text
+        className='py-1 text-xl text-center bg-blue-500 text-white'
       >
-        ইকরা (আদর্শলিপি)
-      </Text> */}
-      <ScrollView>
+        শিশুশিক্ষা (ইকরা)
+      </Text>
+      <ScrollView
+        className=''
+      >
         <View
           className='pb-4'
         >
           <ImageBackground
           source={require('../assets/home_hero.jpg')}
-          resizeMode="cover"
+          resizeMode="center"
           className='h-[270px] items-center pt-12'
         >
-          <View
-            className='px-5 pb-2 bg-blue-500 rounded-tl-3xl rounded-br-3xl'
-          >
-            <Text
-              className='text-2xl pt-1 text-center font-bangla font-bold text-white'
-            >
-              ইকরা
-            </Text>
-            <Text
-              className='text-white'
-            >
-              আপনার শিশুর প্রথম শিক্ষার
-            </Text>
-          </View>
-
+          
         </ImageBackground>
         </View>
         
         <View
-          className='flex-row flex-wrap'
+          className='flex-row flex-wrap pb-5'
         >
           {
             home.map((item, i) =>
-              <View
+              <TouchableOpacity
                 key={i}
-                className='h-[160px] w-6/12 p-2'
+                className='h-[180px] w-6/12 p-2'
               >
                 <View
                   className='h-full rounded-md overflow-hidden'
                 >
                   <ImageBackground
                     source={item.image}
-                    resizeMode="cover"
-                    className='h-[160px] w-full items-center justify-end pb-5'
+                    resizeMode="center"
+                    className='h-[180px] w-full items-center justify-end pb-4 rounded-md'
                   >
                     <Text
-                      className='text-xl bg-white w-full text-center rounded-full font-bold'
+                      className='text-base bg-white w-full text-center rounded-full'
                     >
                       {item?.title}
                     </Text>
                   </ImageBackground>
                 </View>
-              </View>
+              </TouchableOpacity>
 
             )
           }
