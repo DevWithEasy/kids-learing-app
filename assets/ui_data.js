@@ -10,35 +10,43 @@ import color from '../assets/color.png'
 const home = [
     {
         title : 'আরবি',
-        image : arabic
+        image : arabic,
+        path : ''
     },
     {
         title : 'বাংলা',
-        image : bangla
+        image : bangla,
+        path : '/bangla'
     },
     {
         title : 'ইংরেজি',
-        image : english
+        image : english,
+        path : ''
     },
     {
         title : 'অংক',
-        image : number
+        image : number,
+        path : ''
     },
     {
         title : 'বারের নাম',
-        image : day
+        image : day,
+        path : ''
     },
     {
         title : 'মাসের নাম',
-        image : month
+        image : month,
+        path : ''
     },
     {
         title : 'ঋতু (কাল)',
-        image : season
+        image : season,
+        path : ''
     },
     {
         title : 'রং পরিচিতি',
-        image : color
+        image : color,
+        path : ''
     },
 ]
 

@@ -5,6 +5,7 @@
     "scheme": "kids-learning",
     "version": "1.0.0",
     "orientation": "portrait",
+    "assetBundlePatterns": ["assets/*"],
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {

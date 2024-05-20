@@ -2,40 +2,46 @@ import { Image, ImageBackground, ScrollView, StyleSheet, Text, TouchableOpacity,
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import Source from "../assets/Source";
 import { home } from "../assets/ui_data";
+import { StatusBar } from "expo-status-bar";
+import { useRouter } from "expo-router";
 
 
 export default function Page() {
   const inset = useSafeAreaInsets()
-  const array = new Array(10).fill(0).map((_, i) => i + 1)
-  // console.log(Source.colors())
+  const router = useRouter()
   return (
     <View
-      style={{
-        paddingTop: inset.top
-      }}
+      // style={{
+      //   paddingTop: inset.top
+      // }}
 
-      className='bg-white pb-10'
+      className='bg-white'
     >
-      <Text
-        className='py-1 text-xl text-center bg-blue-500 text-white'
-      >
-        শিশুশিক্ষা (ইকরা)
-      </Text>
+      <StatusBar backgroundColor="#3b82f6" />
       <ScrollView
+
         className=''
       >
+        <Text
+          style={{
+            paddingTop: inset.top
+          }}
+          className='py-1 text-xl text-center bg-blue-500 text-white'
+        >
+          শিশুশিক্ষা (ইকরা)
+        </Text>
         <View
           className='pb-4'
         >
           <ImageBackground
-          source={require('../assets/home_hero.jpg')}
-          resizeMode="center"
-          className='h-[270px] items-center pt-12'
-        >
-          
-        </ImageBackground>
+            source={require('../assets/home_hero.jpg')}
+            resizeMode="center"
+            className='h-[270px] items-center pt-12'
+          >
+
+          </ImageBackground>
         </View>
-        
+
         <View
           className='flex-row flex-wrap pb-5'
         >
@@ -43,6 +49,7 @@ export default function Page() {
             home.map((item, i) =>
               <TouchableOpacity
                 key={i}
+                onPress={()=>router.push(item.path)}
                 className='h-[180px] w-6/12 p-2'
               >
                 <View
@@ -54,7 +61,7 @@ export default function Page() {
                     className='h-[180px] w-full items-center justify-end pb-4 rounded-md'
                   >
                     <Text
-                      className='text-base bg-white w-full text-center rounded-full'
+                      className='text-base bg-white w-full text-center'
                     >
                       {item?.title}
                     </Text>
