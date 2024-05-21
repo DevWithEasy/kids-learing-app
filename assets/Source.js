@@ -1,4 +1,4 @@
-import data from '../assets/data.json'
+import data from '../assets/main'
 
 class SourceData{
     constructor(){
@@ -9,10 +9,16 @@ class SourceData{
         return this.data
     }
     banglaAll(){
-        return this.data['bangla_alphabet']
+        return this.data['bangla_alphabets']
     }
     banglaSingle(id){
-        return this.data['bangla_alphabet'].find(alphabet=> alphabet._id === id)
+        return this.data['bangla_alphabets'].find(alphabet=> alphabet._id === id)
+    }
+    banglaVowel(){
+        return this.data['bangla_alphabets'].filter(alphabet=> alphabet.vowel === true)
+    }
+    banglaConstant(){
+        return this.data['bangla_alphabets'].filter(alphabet=> alphabet.vowel === false)
     }
     karAll(){
         return this.data['bangla_kar']
@@ -21,10 +27,10 @@ class SourceData{
         return this.data['bangla_kar'].find(alphabet=> alphabet._id === id)
     }
     puncuationAll(){
-        return this.data['bangla_puncuation']
+        return this.data['bagla_punctuation_marks']
     }
     puncuationSingle(id){
-        return this.data['bangla_puncuation'].find(alphabet=> alphabet._id === id)
+        return this.data['bagla_punctuation_marks'].find(alphabet=> alphabet._id === id)
     }
     folaAll(){
         return this.data['bangla_fola']
@@ -33,16 +39,16 @@ class SourceData{
         return this.data['bangla_fola'].find(alphabet=> alphabet._id === id)
     }
     englishAll(){
-        return this.data['english_alphabet']
+        return this.data['enslish_alphabets']
     }
     englishSingle(id){
-        return this.data['english_alphabet'].find(alphabet=> alphabet._id === id)
+        return this.data['enslish_alphabets'].find(alphabet=> alphabet._id === id)
     }
     arabicAll(){
-        return this.data['arabic_alphabet']
+        return this.data['arabic_alphabets']
     }
     arabicSingle(id){
-        return this.data['arabic_alphabet'].find(alphabet=> alphabet._id === id)
+        return this.data['arabic_alphabets'].find(alphabet=> alphabet._id === id)
     }
     numbers(){
         return this.data['numbers']

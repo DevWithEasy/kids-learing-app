@@ -1,7 +1,6 @@
 import { SplashScreen, Stack } from 'expo-router'
 import { useFonts } from 'expo-font';
 import { useEffect } from 'react';
-import createDatabase from '../utils/createDatabase';
 SplashScreen.preventAutoHideAsync()
 
 export default function RootLayout() {
@@ -9,8 +8,6 @@ export default function RootLayout() {
     "kalpurush": require("../assets/fonts/kalpurush.ttf")
   })
   useEffect(() => {
-    createDatabase()
-    //fonts load
     if (error) throw error;
     if (fontsLoaded) SplashScreen.hideAsync();
   }, [fontsLoaded, error])

@@ -14,7 +14,7 @@ const createDatabase = async () => {
         const dbExists = await FileSystem.getInfoAsync(documentPath);
 
         if (!dbExists.exists) {
-            await FileSystem.copyAsync({
+            const create = await FileSystem.copyAsync({
                 from: assetPath,
                 to: documentPath
             })
