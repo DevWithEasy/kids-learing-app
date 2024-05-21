@@ -19,6 +19,7 @@ import english_small from '../assets/english_small.png'
 //math
 import math_bangla from '../assets/math_bangla.png'
 import math_english from '../assets/math_english.png'
+import math_table from '../assets/math_table.png'
 
 const home = [
     {
@@ -114,6 +115,11 @@ const math_page = [
         title : 'Number (1-100)',
         image : math_english,
         path : '/math/english'
+    },
+    {
+        title : 'নামতা',
+        image : math_table,
+        path : '/math/table'
     },
 ]
 
