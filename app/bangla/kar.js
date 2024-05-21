@@ -6,7 +6,7 @@ export default function Kar() {
   console.log(Source.karAll()[0].image)
   return (
     <ScrollView
-      className='bg-white'
+      className=''
     >
       <View
         className='flex-row flex-wrap'
@@ -18,7 +18,7 @@ export default function Kar() {
               className='w-4/12 p-2'
             >
               <View
-                className='h-32 justify-center items-center space-y-2 bg-gray-50 rounded-md overflow-hidden'
+                className='h-32 justify-center items-center space-y-2 bg-white rounded-md overflow-hidden'
               >
                 <Image
                   source={item.image}

@@ -6,7 +6,7 @@ export default function Vowel() {
   
   return (
     <ScrollView
-      className='bg-white'
+      className=''
     >
       <View
         className='flex-row flex-wrap'
@@ -18,7 +18,7 @@ export default function Vowel() {
             className='w-4/12 p-2'
           >
             <View
-              className='h-20 justify-center items-center bg-gray-50 rounded-md'
+              className='h-20 justify-center items-center bg-white rounded-md'
             >
             <Text
               className='text-3xl'

@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
 import React from 'react'
 import Source from '../../assets/Source'
 
-export default function Constant() {
+export default function Bangla() {
   return (
     <ScrollView
     className=''
@@ -11,18 +11,23 @@ export default function Constant() {
       className='flex-row flex-wrap'
     >
     {
-      Source.banglaConstant().map(item=>
+      Source.numbersBangla().map(item=>
         <TouchableOpacity
           key={item._id}
           className='w-4/12 p-2'
         >
           <View
-            className='h-20 justify-center items-center bg-white rounded-md'
+            className='h-28 justify-center items-center space-y-2 bg-white rounded-md'
           >
           <Text
-            className='text-3xl'
+            className='text-4xl'
           >
             {item.letter}
+          </Text>
+          <Text
+            className='text-lg'
+          >
+            {item.punctuation}
           </Text>
           </View>
         </TouchableOpacity>

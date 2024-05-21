@@ -56,6 +56,42 @@ export default function RootLayout() {
           title: 'বাংলা যতিচিহ্ন'
         }}
       />
+      <Stack.Screen
+        name='english/index'
+        options={{
+          title: 'ইংরেজি'
+        }}
+      />
+      <Stack.Screen
+        name='english/capital'
+        options={{
+          title: 'ইংরেজি - বড় হাতের বর্ণ'
+        }}
+      />
+      <Stack.Screen
+        name='english/small'
+        options={{
+          title: 'ইংরেজি - ছোট হাতের বর্ণ'
+        }}
+      />
+      <Stack.Screen
+        name='math/index'
+        options={{
+          title: 'অংক'
+        }}
+      />
+      <Stack.Screen
+        name='math/bangla'
+        options={{
+          title: 'সংখ্যা - বাংলা'
+        }}
+      />
+      <Stack.Screen
+        name='math/english'
+        options={{
+          title: 'সংখ্যা - ইংরেজি'
+        }}
+      />
     </Stack>
   )
 }

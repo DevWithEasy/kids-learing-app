@@ -13,6 +13,12 @@ import bangla_constant from '../assets/bangla_constant.png'
 import bangla_fola from '../assets/bangla_fola.png'
 import bangla_kar from '../assets/bangla_kar.png'
 import bangla_punctuation from '../assets/bangla_punctuation.png'
+//english
+import english_capital from '../assets/english_capital.png'
+import english_small from '../assets/english_small.png'
+//math
+import math_bangla from '../assets/math_bangla.png'
+import math_english from '../assets/math_english.png'
 
 const home = [
     {
@@ -28,12 +34,12 @@ const home = [
     {
         title : 'ইংরেজি',
         image : english,
-        path : ''
+        path : '/english'
     },
     {
         title : 'অংক',
         image : number,
-        path : ''
+        path : '/math'
     },
     {
         title : 'বারের নাম',
@@ -85,7 +91,35 @@ const bangla_page = [
     },
 ]
 
+const english_page = [
+    {
+        title : 'বড় হাতের বর্ণ',
+        image : english_capital,
+        path : '/english/capital'
+    },
+    {
+        title : 'ছোট হাতের বর্ণ',
+        image : english_small,
+        path : '/english/small'
+    },
+]
+
+const math_page = [
+    {
+        title : 'সংখ্যা (১-১০০)',
+        image : math_bangla,
+        path : '/math/bangla'
+    },
+    {
+        title : 'Number (1-100)',
+        image : math_english,
+        path : '/math/english'
+    },
+]
+
 export {
     home,
-    bangla_page
+    bangla_page,
+    english_page,
+    math_page
 }

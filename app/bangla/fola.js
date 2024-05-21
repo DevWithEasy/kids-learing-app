@@ -3,28 +3,50 @@ import React from 'react'
 import Source from '../../assets/Source'
 
 export default function Fola() {
-  console.log(Source.karAll()[0])
+  console.log(Source.folaAll()[0])
   return (
     <ScrollView
-    className='bg-white'
+    className=''
   >
     <View
-      className=''
+      className='flex-row flex-wrap'
     >
     {
       Source.folaAll().map(item=>
         <View
           key={item._id}
-          className='w-full p-2'
+          className='w-6/12 p-2'
         >
           <View
-            className='h-40 flex-row space-y-2 bg-gray-50 rounded-md overflow-hidden'
+            className='bg-white rounded-md overflow-hidden'
           >
-            <View>
-
+            <View
+              className='p-2 justify-center items-center'
+            >
+              <Text
+                className='text-6xl'
+              >
+                {item.letter}
+              </Text>
+              <Text
+                className='text-lg'
+              >
+                {item.name}
+              </Text>
             </View>
-            <View>
-              
+            <View
+              className='p-2 flex-row flex-wrap'
+            >
+              {
+                item.examples.map((example,i) =>
+                  <Text
+                    key={i}
+                    className='p-1'
+                  >
+                    {example}
+                  </Text>
+                )
+              }
               </View>
           </View>
         </View>

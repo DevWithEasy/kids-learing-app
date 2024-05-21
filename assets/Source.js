@@ -1,4 +1,5 @@
 import data from '../assets/main'
+import bengaliToNumeric from '../utils/banglaNumeric'
 
 class SourceData{
     constructor(){
@@ -50,17 +51,29 @@ class SourceData{
     arabicSingle(id){
         return this.data['arabic_alphabets'].find(alphabet=> alphabet._id === id)
     }
-    numbers(){
-        return this.data['numbers']
+    numbersBangla(){
+        return this.data['numbers'].filter(number=> number.lang === 'bn').sort((a, b) => bengaliToNumeric[a.letter] - bengaliToNumeric[b.letter])
     }
-    days(){
-        return this.data['days']
+    numbersEnglish(){
+        return this.data['numbers'].filter(number=> number.lang === 'en').sort((a,b)=>a.letter - b.letter )
     }
-    months(){
-        return this.data['months']
+    daysBangla(){
+        return this.data['days'].filter(day=> day.lang === 'bn')
     }
-    seasons(){
-        return this.data['seasons']
+    daysEnglish(){
+        return this.data['days'].filter(day=> day.lang === 'en')
+    }
+    monthsBangla(){
+        return this.data['months'].filter(month=> month.lang === 'bn')
+    }
+    monthsEnglish(){
+        return this.data['months'].filter(month=> month.lang === 'en')
+    }
+    seasonsBangla(){
+        return this.data['seasons'].filter(season=> season.lang === 'bn')
+    }
+    seasonsEnglish(){
+        return this.data['seasons'].filter(season=> season.lang === 'en')
     }
     colors(){
         return this.data['colors']
