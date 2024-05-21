@@ -23,8 +23,37 @@ export default function RootLayout() {
       <Stack.Screen
         name='bangla/index'
         options={{
-          // headerShown : false
-          title: 'Bangla'
+          title: 'বাংলা শিখি'
+        }}
+      />
+      <Stack.Screen
+        name='bangla/vowel'
+        options={{
+          title: 'বাংলা স্বরবর্ণ'
+        }}
+      />
+      <Stack.Screen
+        name='bangla/constant'
+        options={{
+          title: 'বাংলা ব্যঞ্জনবর্ণ'
+        }}
+      />
+      <Stack.Screen
+        name='bangla/kar'
+        options={{
+          title: 'বাংলা কার'
+        }}
+      />
+      <Stack.Screen
+        name='bangla/fola'
+        options={{
+          title: 'বাংলা ফলা'
+        }}
+      />
+      <Stack.Screen
+        name='bangla/punctuation'
+        options={{
+          title: 'বাংলা যতিচিহ্ন'
         }}
       />
     </Stack>
