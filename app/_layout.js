@@ -164,6 +164,12 @@ export default function RootLayout() {
           title: 'রং পরিচিতি'
         }}
       />
+            <Stack.Screen
+        name='alphabet/[id]'
+        options={{
+          title: 'রং পরিচিতি'
+        }}
+      />
     </Stack>
   )
 }
