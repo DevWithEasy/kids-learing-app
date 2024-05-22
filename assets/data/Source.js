@@ -1,5 +1,5 @@
-import data from '../assets/main'
-import bengaliToNumeric from '../utils/banglaNumeric'
+import bengaliToNumeric from '../../utils/banglaNumeric'
+import data from './main'
 
 class SourceData{
     constructor(){

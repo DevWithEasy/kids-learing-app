@@ -1,8 +1,8 @@
 import { View, Text, ScrollView, TouchableOpacity, ImageBackground } from 'react-native'
-import { bangla_page, math_page } from '../../assets/data/ui_data'
+import { day_page } from '../../assets/data/ui_data'
 import { useRouter } from 'expo-router'
 
-export default function Math() {
+export default function Day() {
   const  router = useRouter()
   return (
     <ScrollView
@@ -12,7 +12,7 @@ export default function Math() {
         className='flex-row flex-wrap pb-5'
       >
         {
-          math_page.map((item, i) =>
+          day_page.map((item, i) =>
             <TouchableOpacity
               key={i}
               onPress={() => router.push(item.path)}

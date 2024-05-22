@@ -1,7 +1,7 @@
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import Source from "../assets/Source";
-import { home } from "../assets/ui_data";
+import Source from "../assets/data/Source";
+import { home } from "../assets/data/ui_data";
 import { StatusBar } from "expo-status-bar";
 import { useRouter } from "expo-router";
 
@@ -34,7 +34,7 @@ export default function Page() {
           className='pb-4'
         >
           <ImageBackground
-            source={require('../assets/home_hero.jpg')}
+            source={require('../assets/app_image/home_hero.jpg')}
             resizeMode="center"
             className='h-[270px] items-center pt-12'
           >

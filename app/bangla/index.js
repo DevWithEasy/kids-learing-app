@@ -1,6 +1,5 @@
 import { View, Text, ScrollView, TouchableOpacity, ImageBackground } from 'react-native'
-import Source from '../../assets/Source'
-import { bangla_page } from '../../assets/ui_data'
+import { bangla_page } from '../../assets/data/ui_data'
 import { useRouter } from 'expo-router'
 
 export default function Bangla() {

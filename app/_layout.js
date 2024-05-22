@@ -92,6 +92,78 @@ export default function RootLayout() {
           title: 'সংখ্যা - ইংরেজি'
         }}
       />
+      <Stack.Screen
+        name='math/table'
+        options={{
+          title: 'নামতা'
+        }}
+      />
+      <Stack.Screen
+        name='math/table/[id]'
+        options={{
+          title: 'সংখ্যা - ইংরেজি'
+        }}
+      />
+      <Stack.Screen
+        name='day/index'
+        options={{
+          title: 'সাতদিনের নাম'
+        }}
+      />
+      <Stack.Screen
+        name='day/bangla'
+        options={{
+          title: 'বাংলা সাতদিনের নাম'
+        }}
+      />
+      <Stack.Screen
+        name='day/english'
+        options={{
+          title: 'ইংরেজি সাতদিনের নাম'
+        }}
+      />
+      <Stack.Screen
+        name='month/index'
+        options={{
+          title: 'বার মাসের নাম'
+        }}
+      />
+      <Stack.Screen
+        name='month/bangla'
+        options={{
+          title: 'বাংলা মাসের নাম'
+        }}
+      />
+      <Stack.Screen
+        name='month/english'
+        options={{
+          title: 'ইংরেজি মাসের নাম'
+        }}
+      />
+      <Stack.Screen
+        name='season/index'
+        options={{
+          title: 'ছয় ঋতুর নাম'
+        }}
+      />
+      <Stack.Screen
+        name='season/bangla'
+        options={{
+          title: 'বাংলা ঋতুর নাম'
+        }}
+      />
+      <Stack.Screen
+        name='season/english'
+        options={{
+          title: 'ইংরেজি ঋতুর নাম'
+        }}
+      />
+      <Stack.Screen
+        name='color/index'
+        options={{
+          title: 'রং পরিচিতি'
+        }}
+      />
     </Stack>
   )
 }

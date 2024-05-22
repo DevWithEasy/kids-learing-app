@@ -1,6 +1,7 @@
-import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
-import Source from '../../assets/Source'
+import Source from '../../assets/data/Source'
+import playAudio from '../../utils/playAudio'
 
 export default function Fola() {
   console.log(Source.folaAll()[0])
@@ -15,6 +16,7 @@ export default function Fola() {
       Source.folaAll().map(item=>
         <View
           key={item._id}
+          onPress={()=> playAudio(item.audio)}
           className='w-6/12 p-2'
         >
           <View

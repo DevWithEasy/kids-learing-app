@@ -1,6 +1,7 @@
 import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
-import Source from '../../assets/Source'
+import Source from '../../assets/data/Source'
+import playAudio from '../../utils/playAudio'
 
 export default function Punctuation() {
   console.log(Source.puncuationAll()[0])
@@ -15,6 +16,7 @@ export default function Punctuation() {
           Source.puncuationAll().map(item =>
             <View
               key={item._id}
+              onPress={()=> playAudio(item.audio)}
               className='p-2'
             >
               <View

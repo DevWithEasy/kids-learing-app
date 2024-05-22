@@ -1,6 +1,7 @@
 import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
-import Source from '../../assets/Source'
+import Source from '../../assets/data/Source'
+import playAudio from '../../utils/playAudio'
 
 export default function Kar() {
   console.log(Source.karAll()[0].image)
@@ -15,6 +16,7 @@ export default function Kar() {
           Source.karAll().map(item =>
             <TouchableOpacity
               key={item._id}
+              onPress={()=> playAudio(item.audio)}
               className='w-4/12 p-2'
             >
               <View

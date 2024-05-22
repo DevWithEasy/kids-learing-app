@@ -1,5 +1,5 @@
 import { View, Text, ScrollView, TouchableOpacity, ImageBackground } from 'react-native'
-import { english_page } from '../../assets/ui_data'
+import { english_page } from '../../assets/data/ui_data'
 import { useRouter } from 'expo-router'
 
 export default function English() {

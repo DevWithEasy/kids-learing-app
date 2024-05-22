@@ -1,10 +1,9 @@
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, TouchableOpacity, ScrollView, Image } from 'react-native'
 import React from 'react'
 import Source from '../../assets/data/Source'
 import playAudio from '../../utils/playAudio'
 
 export default function English() {
-    console.log(Source.numbersEnglish()[0])
   return (
     <ScrollView
     className=''
@@ -13,24 +12,23 @@ export default function English() {
       className='flex-row flex-wrap'
     >
     {
-      Source.numbersEnglish().map(item=>
+      Source.daysEnglish().map(item=>
         <TouchableOpacity
           key={item._id}
           onPress={()=> playAudio(item.audio)}
-          className='w-4/12 p-2'
+          className='w-6/12 p-2'
         >
           <View
-            className='h-28 justify-center items-center space-y-3 bg-white rounded-md'
+            className='p-2 justify-center items-center space-y-2 bg-white rounded-md'
           >
+            <Image
+                source={item.image}
+                className='h-24 w-24'
+            />
           <Text
-            className='text-4xl'
+            className='text-xl'
           >
-            {item.letter}
-          </Text>
-          <Text
-            className=''
-          >
-            {item.punctuation}
+            {item.name}
           </Text>
           </View>
         </TouchableOpacity>

@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native'
 import React from 'react'
-import Source from '../../assets/Source'
+import Source from '../../assets/data/Source'
+import playAudio from '../../utils/playAudio'
 
 export default function Constant() {
   return (
@@ -14,6 +15,7 @@ export default function Constant() {
       Source.banglaConstant().map(item=>
         <TouchableOpacity
           key={item._id}
+          onPress={()=> playAudio(item.audio)}
           className='w-4/12 p-2'
         >
           <View
