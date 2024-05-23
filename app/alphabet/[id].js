@@ -4,7 +4,7 @@ import { useLocalSearchParams } from 'expo-router'
 import Source from '../../assets/data/Source'
 import playAudio from '../../utils/playAudio'
 import VideoModal from '../../components/VideoModal'
-import video_icon from '../../assets/app_image/video_play.png'
+import video_icon from '../../assets/app_image/video_icon.png'
 import writing_pen from '../../assets/app_image/writing_pen.png'
 
 
@@ -66,7 +66,7 @@ export default function AlphabetId() {
                 {
                     alphabets.map(item => (
                         <TouchableOpacity
-                            key={item.id}
+                            key={item._id}
                             onPress={() => {
                                 setCurrentId(item._id)
                                 playAudio(item.audio)

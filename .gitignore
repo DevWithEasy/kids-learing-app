@@ -11,6 +11,7 @@ assets/main.db
 assets/image
 assets/video
 assets/audio
+assets/assets.zip
 
 # Native
 *.orig.*
