@@ -8,6 +8,9 @@ node_modules/
 dist/
 web-build/
 assets/main.db
+assets/image
+assets/video
+assets/audio
 
 # Native
 *.orig.*
