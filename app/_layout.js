@@ -21,6 +21,12 @@ export default function RootLayout() {
         }}
       />
       <Stack.Screen
+        name='arabic/index'
+        options={{
+          title: 'আরবি শিখি'
+        }}
+      />
+      <Stack.Screen
         name='bangla/index'
         options={{
           title: 'বাংলা শিখি'

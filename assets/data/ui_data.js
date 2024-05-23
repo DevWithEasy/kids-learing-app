@@ -34,7 +34,7 @@ const home = [
     {
         title: 'আরবি',
         image: arabic,
-        path: ''
+        path: '/arabic'
     },
     {
         title: 'বাংলা',

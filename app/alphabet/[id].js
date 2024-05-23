@@ -14,8 +14,7 @@ export default function AlphabetId() {
     const alphabet = Source.banglaSingle(currentId)
     const alphabets = alphabet.vowel ? Source.banglaVowel() : Source.banglaConstant()
     const [isVideo, setIsVideo] = useState(false)
-
-
+    
     return (
         <ScrollView
             className='p-2 space-y-2'
