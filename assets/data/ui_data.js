@@ -71,6 +71,11 @@ const home = [
         image: color,
         path: '/color'
     },
+    {
+        title: 'Game',
+        image: color,
+        path: '/game'
+    },
 ]
 
 const bangla_page = [

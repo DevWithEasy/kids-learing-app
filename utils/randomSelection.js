@@ -1,15 +1,17 @@
 import getRandomInt from "./randomInt";
+import shuffleArray from "./suffleWord";
 
 function getRandomSelection(data) {
-    const selectIndex = getRandomInt(data.length);
-    const selectObject = data[selectIndex];
+    const suffleData = shuffleArray(data)
+    const selectIndex = getRandomInt(suffleData.length);
+    const selectObject = suffleData[selectIndex];
 
     let choose = [selectObject];
-    let remainingIndices = [...Array(data.length).keys()].filter(i => i !== selectIndex);
+    let remainingIndices = [...Array(suffleData.length).keys()].filter(i => i !== selectIndex);
     
     while (choose.length < 4 && remainingIndices.length > 0) {
         const randomIndex = getRandomInt(remainingIndices.length);
-        choose.push(data[remainingIndices[randomIndex]]);
+        choose.push(suffleData[remainingIndices[randomIndex]]);
         remainingIndices.splice(randomIndex, 1);
     }
 
@@ -18,3 +20,5 @@ function getRandomSelection(data) {
         choose: choose
     };
 }
+
+export default getRandomSelection

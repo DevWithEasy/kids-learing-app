@@ -176,6 +176,12 @@ export default function RootLayout() {
           title: 'রং পরিচিতি'
         }}
       />
+      <Stack.Screen
+        name='game/index'
+        options={{
+          title: 'Game'
+        }}
+      />
     </Stack>
   )
 }
