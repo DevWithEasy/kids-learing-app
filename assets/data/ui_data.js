@@ -74,7 +74,7 @@ const home = [
     {
         title: 'Game',
         image: color,
-        path: '/game'
+        path: '/game/bangla/alphabet_match'
     },
 ]
 

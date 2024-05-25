@@ -177,7 +177,7 @@ export default function RootLayout() {
         }}
       />
       <Stack.Screen
-        name='game/index'
+        name='game/bangla/alphabet_match'
         options={{
           title: 'Game'
         }}
