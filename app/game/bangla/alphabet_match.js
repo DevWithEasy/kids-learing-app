@@ -3,30 +3,28 @@ import React, { useEffect, useState } from 'react'
 import getRandomSelection from '../../../utils/randomSelection'
 import Source from '../../../assets/data/Source'
 import playAudio from '../../../utils/playAudio'
+import AlphabetMatchItem from '../../../components/AlphabetMatchItem'
+import shuffleArray from '../../../utils/suffleWord'
+import GameCompleteModal from '../../../components/GameCompleteModal'
 
 export default function AlphabetMatch() {
     const [start, setStart] = useState(false)
     const [alphabet, setAlphabet] = useState({})
-    const [palyed, setPlayed] = useState([])
-    const [correct,setCorrect] = useState(false)
+    const [played, setPlayed] = useState([])
+    const [isVisible,setIsVisible] = useState(true)
 
     const handleStart = () => {
         setStart(true)
         const alphabet = getRandomSelection(Source.banglaVowel())
         setAlphabet(alphabet)
         playAudio(alphabet.select.audio)
-        setPlayed([...palyed,alphabet.select.letter])
+        setPlayed([...played, alphabet.select.letter])
     }
-    const handleSelect = async(item) => {
-        if(item._id === alphabet.select._id){
-            const { sound } = await Audio.Sound.createAsync( require('../../../assets/audio/win_sound.wav'))
-            await sound.playAsync()
-            setCorrect(true)
-        }else{
-
+    useEffect(() => {
+        if (played.includes('complete')) {
+            setIsVisible(true)
         }
-    }
-    
+    }, [played])
     return (
         <>
             {
@@ -59,25 +57,22 @@ export default function AlphabetMatch() {
                             className='flex-1 flex-row flex-wrap'
                         >
                             {
-                                alphabet.choose.map(item=>
-                                    <TouchableOpacity
+                                shuffleArray(alphabet.choose).map(item =>
+                                    <AlphabetMatchItem
                                         key={item._id}
-                                        onPress={()=>handleSelect(item)}
-                                        className='w-1/2 h-[150] p-2'
-                                    >
-                                        <View
-                                            className='w-full h-full bg-red-50 justify-center items-center rounded-md'
-                                        >
-                                        <Text
-                                            className='p-3 text-5xl'
-                                        >
-                                            {item.letter}
-                                        </Text>
-                                        </View>
-                                    </TouchableOpacity>
+                                        item={item}
+                                        alphabet={alphabet}
+                                        setAlphabet={setAlphabet}
+                                        played={played}
+                                        setPlayed={setPlayed}
+                                    />
                                 )
                             }
                         </View>
+                        <GameCompleteModal {...{
+                            isVisible,
+                            setIsVisible
+                        }}/>
                     </View>
             }
         </>

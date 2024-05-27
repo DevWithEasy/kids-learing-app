@@ -60,7 +60,7 @@ export default function AlphabetId() {
             </View>
             <ScrollView
                 horizontal={true}
-                className='p-2 bg-white space-x-2'
+                className='bg-white space-x-2'
             >
                 {
                     alphabets.map(item => (
